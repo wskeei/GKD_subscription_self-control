@@ -4,10 +4,10 @@ import categories from './categories';
 import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
-  id: 233,
-  name: 'Subscription',
+  id: 825,
+  name: 'GKD Self Control',
   version: 0,
-  author: 'author',
+  author: 'zeiy',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/gkd-kit/subscription-template',
   categories,
