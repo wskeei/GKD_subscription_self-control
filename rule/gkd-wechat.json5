@@ -1,6 +1,4 @@
-import { defineGkdApp } from '@gkd-kit/define';
-
-export default defineGkdApp({
+{
   id: 'com.tencent.mm',
   name: 'WeChat',
   groups: [
@@ -17,7 +15,9 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.finder.ui.FinderHomeUI',
           ],
           action: 'back',
-          matches: ['[id="android:id/content"]'],
+          matches: [
+            '[id="android:id/content"]',
+          ],
           snapshotUrls: [],
         },
       ],
@@ -35,7 +35,9 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
           ],
           action: 'back',
-          matches: ['[id="android:id/content"]'],
+          matches: [
+            '[id="android:id/content"]',
+          ],
           snapshotUrls: [],
         },
       ],
@@ -67,4 +69,4 @@ export default defineGkdApp({
       ],
     },
   ],
-});
+}

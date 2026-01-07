@@ -1,0 +1,26 @@
+{
+  id: 'com.tencent.tim',
+  name: 'TIM',
+  groups: [
+    {
+      key: 1,
+      name: '禁止刷好友动态',
+      desc: '打开好友动态时自动返回',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
+          matches: [
+            // 匹配顶部标题 "好友动态"
+            '[id="com.tencent.tim.qzone_df_impl:id/cwa"][text="好友动态"]',
+          ],
+          action: 'back',
+          snapshotUrls: [],
+        },
+      ],
+    },
+  ],
+}
