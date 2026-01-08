@@ -44,24 +44,26 @@
     },
     {
       key: 3,
-      name: '小程序-知乎-自动退出',
-      desc: '打开知乎小程序时自动退出',
+      name: '禁止打开知乎小程序',
+      desc: '打开知乎小程序时自动返回',
       enable: true,
       rules: [
         {
           key: 0,
           activityIds: [
-            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI01',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI02',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI03',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI04',
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI05',
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI06',
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI07',
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI08',
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI09',
           ],
           matches: [
-            // 匹配知乎小程序特有的引导文本或底部下载提示
-            '[text="添加到我的小程序，快捷访问知乎"]',
-            '[text*="下载知乎 App"]',
+            '[text="热榜"]',
           ],
           action: 'back',
           snapshotUrls: [],

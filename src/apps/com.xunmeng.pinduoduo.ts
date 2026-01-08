@@ -11,22 +11,35 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          // 规则1：匹配底部导航栏的"多多视频"（沉浸模式和非沉浸模式都存在）
           key: 0,
           activityIds: [
             'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
             'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           ],
-          matches: [
-            // 匹配顶部Tab栏结构: 直播/关注/短剧/推荐 在一个 HorizontalScrollView 中
-            // 结构: HorizontalScrollView > LinearLayout > arg > arg > arg > TextView[text="直播"]
-            '[text="直播"] < * < * < * < * < HorizontalScrollView',
-
-            // 匹配多多视频特有的奖励元素
-            '[text="我的金币"]',
-
-            // 匹配视频页右上角"悬浮"的关注按钮 (备用)
-            '[text="关注"][id="com.xunmeng.pinduoduo:id/pdd"]',
+          matches: ['[text="多多视频"]'],
+          action: 'back',
+          snapshotUrls: [],
+        },
+        {
+          // 规则2：匹配视频播放器（沉浸模式特有）
+          key: 1,
+          activityIds: [
+            'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
+            'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           ],
+          matches: ['[desc="tronplayer_view"]'],
+          action: 'back',
+          snapshotUrls: [],
+        },
+        {
+          // 规则3：匹配金币显示（WebView中的元素）
+          key: 2,
+          activityIds: [
+            'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
+            'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          ],
+          matches: ['[text="我的金币"]'],
           action: 'back',
           snapshotUrls: [],
         },
