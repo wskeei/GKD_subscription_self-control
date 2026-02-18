@@ -42,5 +42,62 @@
         },
       ],
     },
+    {
+      key: 3,
+      name: '禁止搜索指定关键词',
+      desc: '在搜索页面检测到查看指数、股票时自动返回桌面',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.alipay.android.phone.businesscommon.globalsearch.ui.MainSearchActivity',
+          ],
+          matches: [
+            '[text*="股票" || text*="指数" || text*="HK" || text*="SH" || text*="SZ" || text*="行情" || text*="走势" || desc*="股票" || desc*="指数"]',
+          ],
+          action: 'back',
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '禁止查看股票详情',
+      desc: '检测到股票或指数详情页面时自动返回',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.antfortune.wealth.stock.common.cube.page.CubePageActivity',
+          ],
+          matches: [
+            '[id="android:id/content"]',
+          ],
+          action: 'back',
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '禁止查看评论区',
+      desc: '检测到评论区页面时自动返回',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+          ],
+          matches: [
+            '[text*="讨论区" || text*="推荐" || text*="评论" || text*="热议"]',
+          ],
+          action: 'back',
+          snapshotUrls: [],
+        },
+      ],
+    },
   ],
 }
