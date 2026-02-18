@@ -164,5 +164,24 @@
         },
       ],
     },
+    {
+      key: 8,
+      name: '禁止搜索指数和股票',
+      desc: '微信搜一搜出现指数或股票内容时自动返回',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.tencent.mm.plugin.webview.ui.tools.fts.MMFTSSOSHomeWebViewUI',
+          ],
+          matches: [
+            '[text*="指数" || text*="股票" || text*="纳斯达克" || text*="恒生" || text*="美股" || text*="A股" || text*="港股"][visibleToUser=true]',
+          ],
+          action: 'back',
+          snapshotUrls: [],
+        },
+      ],
+    },
   ],
 }
