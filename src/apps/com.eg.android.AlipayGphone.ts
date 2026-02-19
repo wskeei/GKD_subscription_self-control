@@ -12,9 +12,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: [
-            'com.eg.android.AlipayGphone.AlipayLogin',
-          ],
+          activityIds: ['com.eg.android.AlipayGphone.AlipayLogin'],
           matches: [
             // 匹配理财页面的标题栏 ID
             '[id="com.alipay.android.widget.fortunehome:id/fortune_title_bar"]',
@@ -114,11 +112,7 @@ export default defineGkdApp({
           activityIds: [
             'com.antfortune.wealth.stock.common.cube.page.CubePageActivity',
           ],
-          matches: [
-            '[text="价格"]',
-            '[text="涨跌额"]',
-            '[text="涨跌幅"]',
-          ],
+          matches: ['[text="价格"]', '[text="涨跌额"]', '[text="涨跌幅"]'],
           action: 'back',
           snapshotUrls: [],
         },
@@ -144,6 +138,4 @@ export default defineGkdApp({
       ],
     },
   ],
-}
-);
-
+});

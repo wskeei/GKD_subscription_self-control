@@ -17,9 +17,7 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.finder.ui.FinderHomeUI',
           ],
           action: 'back',
-          matches: [
-            '[id="android:id/content"]',
-          ],
+          matches: ['[id="android:id/content"]'],
           snapshotUrls: [],
         },
       ],
@@ -37,9 +35,7 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
           ],
           action: 'back',
-          matches: [
-            '[id="android:id/content"]',
-          ],
+          matches: ['[id="android:id/content"]'],
           snapshotUrls: [],
         },
       ],
@@ -64,14 +60,12 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI08',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI09',
           ],
-          matches: [
-            '[text="热榜"]',
-          ],
+          matches: ['[text="热榜"]'],
           action: 'back',
           snapshotUrls: [],
         },
       ],
-    },    
+    },
     {
       key: 4,
       name: '禁止打开估值小助手',
@@ -92,9 +86,7 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI08',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI09',
           ],
-          matches: [
-            '[id="com.tencent.mm:id/hc"][text*="估值计算小助手"]',
-          ],
+          matches: ['[id="com.tencent.mm:id/hc"][text*="估值计算小助手"]'],
           action: 'back',
           snapshotUrls: [],
         },
@@ -120,9 +112,7 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI08',
             'com.tencent.mm.plugin.appbrand.ui.AppBrandUI09',
           ],
-          matches: [
-            '[text="腾讯微证券"]',
-          ],
+          matches: ['[text="腾讯微证券"]'],
           action: 'back',
           snapshotUrls: [],
         },
@@ -136,12 +126,8 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: [
-            'com.tencent.mm.ui.LauncherUI',
-          ],
-          matches: [
-            '[desc="公众号"]',
-          ],
+          activityIds: ['com.tencent.mm.ui.LauncherUI'],
+          matches: ['[desc="公众号"]'],
           action: 'back',
           snapshotUrls: [],
         },
@@ -158,9 +144,7 @@ export default defineGkdApp({
           activityIds: [
             'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           ],
-          matches: [
-            '[id="activity-detail"]',
-          ],
+          matches: ['[id="activity-detail"]'],
           action: 'back',
           snapshotUrls: [],
         },
@@ -186,6 +170,4 @@ export default defineGkdApp({
       ],
     },
   ],
-}
-);
-
+});
