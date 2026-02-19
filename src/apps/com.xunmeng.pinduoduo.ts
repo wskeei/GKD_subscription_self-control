@@ -1,4 +1,4 @@
-import { defineGkdApp } from '@gkd-kit/define';
+﻿import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.xunmeng.pinduoduo',
@@ -17,7 +17,9 @@ export default defineGkdApp({
             'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
             'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           ],
-          matches: ['[text="多多视频"]'],
+          matches: [
+            '[text="多多视频"]',
+          ],
           action: 'back',
           snapshotUrls: [],
         },
@@ -28,7 +30,9 @@ export default defineGkdApp({
             'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
             'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           ],
-          matches: ['[desc="tronplayer_view"]'],
+          matches: [
+            '[desc="tronplayer_view"]',
+          ],
           action: 'back',
           snapshotUrls: [],
         },
@@ -39,11 +43,15 @@ export default defineGkdApp({
             'com.xunmeng.pinduoduo.ui.activity.MainFrameActivity',
             'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           ],
-          matches: ['[text="我的金币"]'],
+          matches: [
+            '[text="我的金币"]',
+          ],
           action: 'back',
           snapshotUrls: [],
         },
       ],
     },
   ],
-});
+}
+);
+
